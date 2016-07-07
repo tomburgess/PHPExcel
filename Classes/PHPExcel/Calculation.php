@@ -1719,7 +1719,7 @@ class PHPExcel_Calculation {
 
 
 	private function __construct(PHPExcel $workbook = NULL) {
-		$setPrecision = (PHP_INT_SIZE == 4) ? 14 : 16;
+		$setPrecision = (PHP_INT_SIZE == 4) ? 12 : 14;
 		$this->_savedPrecision = ini_get('precision');
 		if ($this->_savedPrecision < $setPrecision) {
 			ini_set('precision',$setPrecision);
